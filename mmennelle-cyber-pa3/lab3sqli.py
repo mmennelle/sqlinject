@@ -7,7 +7,7 @@ def send_request(server_ip, query):
     if response.status_code == 200:
         return response.text
     else:
-        return f"Failed to fetch data: {response.status_code}"
+        return f"Failed to get data: {response.status_code}"
 
 def interactiveShell(server_ip):
     print("SQL inject time!")
